@@ -1,9 +1,10 @@
-﻿@Styles.Render("~/Content/css")
-@Styles.Render("~/Imagenes/jpg")
-@Scripts.Render("~/bundles/modernizr")
+﻿@model CineNet.Models.Usuario
+@{
+    ViewBag.Title = "Ingreso";
+}
 
 <div>
-    @using (Html.BeginForm("Ingresar", "Login", FormMethod.Post))
+    @using (Html.BeginForm("Ingresar", "Action", FormMethod.Post))
     {
         <div class="row">
             <div class="col-lg-3"></div>
@@ -28,7 +29,7 @@
 
                     <div class="form-group">
                         <div class="col-lg-12">
-                            <a> @Html.ActionLink("Olvidò su Contraseña.", "Registro", "Action", new { @class = "col-lg-12" }) </a>
+                            <a> @Html.ActionLink("Olvidó su Contraseña.", "Registro", "Action", new { @class = "col-lg-12" }) </a>
                         </div>
                     </div>
 

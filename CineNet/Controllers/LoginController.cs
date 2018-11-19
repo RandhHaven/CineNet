@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using AgenciaMedica.Models.Core;
+using CineNet.Models;
+using System.Web.Mvc;
 
 namespace CineNet.Controllers
 {
@@ -20,13 +22,13 @@ namespace CineNet.Controllers
         public ActionResult Ingresar(string user, string password)
         {
             //Crear todo el esquema de ingreso.
-            /*Usuario usuario = CoreUsuario.ValidarYObtenerUsuario(user, password);
+            Usuario usuario = CoreUsuario.ValidarYObtenerUsuario(user, password);
             if (object.Equals(usuario, null))
             {
             }
             else
             {
-            }*/
+            }
             return View();
         }
 
