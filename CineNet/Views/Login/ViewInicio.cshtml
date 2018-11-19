@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Imagenes/jpg")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="body-content-prim">
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <h1 class="text-h1">Turnos Medicos</h1>
+            <img src="~/Imagenes/Agenda.jpg" style="width:100%">
+            <div class="text">Descargá la cartilla off line desde la app del seguro que tengas asociado y buscá especialistas e instituciones médicas sin conexión a internet.</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <h1 class="text-h1">Turnos Medicos</h1>
+            <img src="~/Imagenes/agua.jpg" style="width:100%">
+            <div class="text">Descargá la cartilla off line desde la app del seguro que tengas asociado y buscá especialistas e instituciones médicas sin conexión a internet.</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <h1 class="text-h1">Turnos Medicos</h1>
+            <img src="~/Imagenes/Gris.jpg" style="width:100%">
+            <div class="text">Descargá la cartilla off line desde la app del seguro que tengas asociado y buscá especialistas e instituciones médicas sin conexión a internet.</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; Buenos Aires @DateTime.Now.Year</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
