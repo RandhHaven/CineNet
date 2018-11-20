@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace CineHandler
 {
     public class UsuarioHandler
     {
+        List<Dictionary<string, object>> ObtenerDictionaryUsuario(List<Dictionary<string, object>> parameters)
+        {
+            return new List<Dictionary<string, object>>();
+        }
     }
 }
