@@ -13,7 +13,7 @@ namespace CineNet.Controllers
         }
 
         // GET: Inicio
-        public ActionResult ViewInicio()
+        public ActionResult ViewIniciort()
         {
             return View();
         }

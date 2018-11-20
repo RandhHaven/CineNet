@@ -16,7 +16,7 @@ namespace CineNet
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Login", action = "ViewInicio", id = UrlParameter.Optional }
+                defaults: new { controller = "Login", action = "ViewLogin", id = UrlParameter.Optional }
             );
         }
     }

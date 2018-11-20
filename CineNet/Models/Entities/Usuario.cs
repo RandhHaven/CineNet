@@ -12,8 +12,7 @@ namespace CineNet.Models
         string email;
         int estado;
         string estadoDescripcion;
-
-
+        
         public int IdUsuario { get => idUsuario; set => idUsuario = value; }
 
         [Required(ErrorMessage = "Please enter student name.")]

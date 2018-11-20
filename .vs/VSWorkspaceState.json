@@ -1,7 +1,5 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\CineNet",
     "\\CineNet\\App_Start",
     "\\CineNet\\Content",
     "\\CineNet\\Controllers",
@@ -9,9 +7,7 @@
     "\\CineNet\\Models\\CoreEntities",
     "\\CineNet\\Models\\Entities",
     "\\CineNet\\Scripts",
-    "\\CineNet\\Views",
-    "\\CineNet\\Views\\Login"
+    "\\CineNet\\Views"
   ],
-  "SelectedNode": "\\CineNet\\Views\\Login\\ViewInicio.cshtml",
   "PreviewInSolutionExplorer": false
 }
