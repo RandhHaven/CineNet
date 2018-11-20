@@ -12,12 +12,6 @@ namespace CineNet.Controllers
             return View();
         }
 
-        // GET: Inicio
-        public ActionResult ViewIniciort()
-        {
-            return View();
-        }
-
         [HttpPost]
         public ActionResult Ingresar(string user, string password)
         {
