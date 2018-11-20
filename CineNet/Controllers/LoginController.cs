@@ -12,7 +12,7 @@ namespace CineNet.Controllers
             return View();
         }
 
-        // GET: Login
+        // GET: Inicio
         public ActionResult ViewInicio()
         {
             return View();

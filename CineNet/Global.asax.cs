@@ -6,7 +6,6 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Optimization;
 
-
 namespace CineNet
 {
     public class MvcApplication : System.Web.HttpApplication
