@@ -1,4 +1,5 @@
 ﻿using CineNet.Models;
+using CineHandler;
 
 namespace AgenciaMedica.Models.Core
 {
