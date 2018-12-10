@@ -1,4 +1,4 @@
-﻿using AgenciaMedica.Models.Core;
+﻿using CineNet.DBContext;
 using CineNet.Models;
 using System.Web.Mvc;
 
@@ -16,7 +16,7 @@ namespace CineNet.Controllers
         public ActionResult Ingresar(string user, string password)
         {
             //Crear todo el esquema de ingreso.
-            Usuario usuario = CoreUsuario.ValidarYObtenerUsuario(user, password);
+            Usuario usuario = DbUsuario.ValidarYObtenerUsuario(user, password);
             if (object.Equals(usuario, null))
             {
             }
