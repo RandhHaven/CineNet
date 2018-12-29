@@ -12,9 +12,7 @@ namespace CineNet.DBContext
     {
         public static Usuario ValidarYObtenerUsuario(string user, string password)
         {
-            //FactoryUsuario nuevoUsuario = new FactoryUsuario();
-            Usuario nuevoDb = new CoreUsuario(user, password).ValidarYObtenerUsuario();// nuevoUsuario.GetUsuario(user, password);
-            //Usuario nuevo = CineHandler.
+            Usuario nuevoDb = new CoreUsuario(user, password).ValidarYObtenerUsuario();
             return nuevoDb;
         }
     }

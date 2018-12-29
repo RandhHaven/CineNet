@@ -1,11 +1,14 @@
-﻿using CineNet.DBContext;
+﻿using CineNet.Base;
+using CineNet.DBContext;
 using CineNet.Models;
 using System.Web.Mvc;
+using System.Web.Routing;
 
 namespace CineNet.Controllers
 {
-    public class LoginController : Controller
+    public class LoginController : CineController
     {
+        
         // GET: Login
         public ActionResult ViewLogin()
         {
