@@ -8,5 +8,12 @@ namespace CineNetBase
 {
     public class Class1
     {
+        private static readonly log4net.ILog log =
+            log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        public void Metodo()
+        {
+            log.Info("Application is working");
+        }
     }
 }

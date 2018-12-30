@@ -1,10 +1,9 @@
 ﻿using CineNet.Models;
 using CineHandler;
-using System.Data.Entity;
 
 namespace AgenciaMedica.Models.Core
 {
-    internal class CoreUsuario : DbContext
+    internal class CoreUsuario
     {
         private string user;
         private string password;
