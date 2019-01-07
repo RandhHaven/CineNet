@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CineNetBase
 {
-    public class Class1
+    public class Base
     {
         private static readonly log4net.ILog log =
             log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
