@@ -8,8 +8,6 @@ namespace CineHandler.Usuario
         {
             List<Dictionary<string, object>> prueba =  new List<Dictionary<string, object>>();
             return prueba;
-        }
-
-        
+        }        
     }
 }

@@ -64,6 +64,7 @@ namespace CineEntity
         {
             get { return _isDirty; }
         }
+
         public bool IsSavable()
         {
             return IsDirty && IsValid(string.Empty);
@@ -73,14 +74,17 @@ namespace CineEntity
         {
             throw new NotImplementedException("The method or operation is not implemented.");
         }
+
         public virtual bool IsValid()
         {
             throw new NotImplementedException("The method or operation is not implemented.");
         }
+
         public virtual ValidationResults Validate(string rule)
         {
             throw new NotImplementedException("The method or operation is not implemented.");
         }
+
         public virtual ValidationResults Validate()
         {
             throw new NotImplementedException("The method or operation is not implemented.");

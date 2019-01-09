@@ -225,6 +225,10 @@
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CineEntity\CineEntity.csproj">
+      <Project>{f0c50c84-a655-4c3e-99d3-d87edbe00c18}</Project>
+      <Name>CineEntity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CineHandler\CineHandler.csproj">
       <Project>{cbd2eeea-f611-4064-a2a2-b7bbc41cfaf4}</Project>
       <Name>CineHandler</Name>
