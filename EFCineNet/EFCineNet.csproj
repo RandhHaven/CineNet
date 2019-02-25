@@ -54,6 +54,7 @@
     <Compile Include="DataBaseContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entity\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

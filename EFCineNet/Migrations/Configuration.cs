@@ -9,7 +9,7 @@ namespace EFCineNet.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(EFCineNet.DataBaseContext context)
