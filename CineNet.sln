@@ -7,11 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineNet", "CineNet\CineNet.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineHandler", "CineHandler\CineHandler.csproj", "{CBD2EEEA-F611-4064-A2A2-B7BBC41CFAF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineEntity", "CineEntity\CineEntity.csproj", "{F0C50C84-A655-4C3E-99D3-D87EDBE00C18}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineNetEntity", "CineEntity\CineNetEntity.csproj", "{F0C50C84-A655-4C3E-99D3-D87EDBE00C18}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineNetBase", "CineNetBase\CineNetBase.csproj", "{9CE84C6C-1237-4316-AAFC-96EE80EC8EED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCineNet", "EFCineNet\EFCineNet.csproj", "{83CA8C54-6EEC-454A-B4FD-F5C8CD96857A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CineBase", "CineBase", "{06E87D97-9942-40F4-BEA4-2CC5C34D0A74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -108,6 +110,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F0C50C84-A655-4C3E-99D3-D87EDBE00C18} = {06E87D97-9942-40F4-BEA4-2CC5C34D0A74}
+		{9CE84C6C-1237-4316-AAFC-96EE80EC8EED} = {06E87D97-9942-40F4-BEA4-2CC5C34D0A74}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF9EE75F-9E6A-41DD-AA47-71B739FA62F7}

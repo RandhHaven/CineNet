@@ -1,6 +1,6 @@
-﻿using CineEntity;
-using CineHandler.Usuario;
+﻿using CineHandler.Usuario;
 using CineNet.Models;
+using CineNetEntity;
 using System.Collections.Generic;
 using System.Linq;
 

@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.Practices.EnterpriseLibrary.Validation;
 using System.Text;
-using CineNetBase.Helpers;
+using CineNetEntity.Helpers;
 
-namespace CineEntity
-{ 
+namespace CineNetEntity
+{
     [Serializable]
     public abstract class AbsEntity
     {

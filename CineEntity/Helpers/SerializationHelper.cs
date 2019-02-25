@@ -3,7 +3,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml.Serialization;
 
-namespace CineNetBase.Helpers
+namespace CineNetEntity.Helpers
 {    
     /// <summary>
     /// La clase SerializationHelper tiene por objetivo asistir en la serializacion de objetos
