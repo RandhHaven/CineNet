@@ -1,7 +1,7 @@
 ﻿namespace EFCineNet
 {
     #region Directivas
-    using System;
+    using EFCineNet.Entity;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Runtime.Serialization;
@@ -10,11 +10,11 @@
     #region Tabla
     [Table("User")]
     [DataContract]
-    public class User
+    public class Client
     {
         [Key]
         [DataMember]
-        public int UserId { get; set; }
+        public int ClientId { get; set; }
 
         [DataMember]
         [Required]
@@ -39,34 +39,17 @@
         [DataMember]
         [Required]
         [StringLength(200)]
-        public string DisplayName { get; set; }
+        public Address AddressClient { get; set; }
 
         [DataMember]
         [Required]
-        public bool IsSuperUser { get; set; }
+        public string IsSuperUser { get; set; }
 
         [DataMember]
         [Required]
         [StringLength(50)]
         public string Password { get; set; }
 
-        [DataMember]
-        [Required]
-        public bool Status { get; set; }
-
-        [DataMember]
-        [Required]
-        public DateTime CurrentDate { get; set; }
-
-        [DataMember]
-        [Required]
-        public DateTime CurrentUsuario { get; set; }
-
-        [DataMember]
-        public DateTime ModificationDate { get; set; }
-
-        [DataMember]
-        public DateTime ModificationUser { get; set; }
     }
     #endregion
 }
