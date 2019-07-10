@@ -1,14 +1,13 @@
 ﻿namespace EFCineNet
 {
     #region Directivas
-    using EFCineNet.Entity;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Runtime.Serialization;
     #endregion
 
     #region Tabla
-    [Table("User")]
+    [Table("Client")]
     [DataContract]
     public class Client
     {

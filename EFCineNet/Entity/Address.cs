@@ -1,4 +1,4 @@
-﻿namespace EFCineNet.Entity
+﻿namespace EFCineNet
 {
     #region Directivas
     using System.ComponentModel.DataAnnotations;
@@ -12,7 +12,7 @@
     {
         [Key]
         [DataMember]
-        public int AdrressId { get; set; }
+        public int AddressId { get; set; }
 
         [DataMember]
         [Required]
