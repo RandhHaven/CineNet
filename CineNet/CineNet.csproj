@@ -130,6 +130,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\styles-slides.css" />
     <Content Include="Global.asax" />
+    <Content Include="Imagenes\Agenda.jpg" />
+    <Content Include="Imagenes\agua.jpg" />
+    <Content Include="Imagenes\Gris.jpg" />
     <Content Include="Imagenes\imagen5.jpg" />
     <Content Include="Imagenes\Oficina.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />

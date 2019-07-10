@@ -9,7 +9,7 @@
     @Styles.Render("~/Imagenes/jpg")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body class="body-content-prim">   
+<body class="body-content-prim">
     <div class="slideshow-container">
         <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
@@ -43,7 +43,7 @@
     </div>
 
     <div class="container body-content">
-       @RenderBody()
+        @RenderBody()
         <hr />
         <footer>
             <p>&copy; Buenos Aires @DateTime.Now.Year</p>
@@ -52,6 +52,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/StylesSlides")
     @RenderSection("scripts", required: false)
 
 </body>
