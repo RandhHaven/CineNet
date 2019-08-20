@@ -44,12 +44,10 @@ namespace CineNetEntity
             return Validation.Validate<AUsuarioEntity>(this);
         }
 
-
         public override ValidationResults Validate(string rule)
         {
             return Validation.Validate<AUsuarioEntity>(this, rule);
         }
-
         #endregion
     }
 }

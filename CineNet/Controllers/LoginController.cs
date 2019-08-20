@@ -1,15 +1,16 @@
-﻿using AgenciaMedica.Models.Core;
-using CineNet.Base;
-using CineNet.DBContext;
-using CineNet.Models;
-using System.Web.Mvc;
-using System.Web.Routing;
-
-namespace CineNet.Controllers
+﻿namespace CineNet.Controllers
 {
+    #region Directives
+    using AgenciaMedica.Models.Core;
+    using CineNet.Base;
+    using CineNet.Models;
+    using System;
+    using System.Web.Mvc;
+    #endregion
+
+    #region Class
     public class LoginController : CineController
-    {
-        
+    {        
         // GET: Login
         public ActionResult ViewLogin()
         {
@@ -19,15 +20,28 @@ namespace CineNet.Controllers
         [HttpPost]
         public ActionResult Ingresar(string user, string password)
         {
-            //Crear todo el esquema de ingreso.
-            Usuario unUsuario = new CoreUsuario(user, password).ValidarYObtenerUsuario();
-            if (object.Equals(unUsuario, null))
+            ViewResult viewController;
+            try
             {
+                //Crear todo el esquema de ingreso.
+                Usuario unUsuario = new CoreUsuario(user, password).ValidarYObtenerUsuario();
+                if (Object.Equals(unUsuario, null))
+                {
+                    //Si existe usuario, redireccionar a la pantalla de inicio
+                }
+                else
+                {
+                    this
+                }
+               
             }
-            else
+            catch (Exception ex)
             {
+                throw ex;
             }
-            return View();
+            viewController = View();
+
+            return viewController;
         }
 
         [HttpPost]
@@ -37,4 +51,5 @@ namespace CineNet.Controllers
             return View();
         }
     }
+    #endregion
 }

@@ -67,6 +67,7 @@
     <Compile Include="CountryEntity.cs" />
     <Compile Include="Helpers\SerializationHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Token.cs" />
     <Compile Include="UsuarioEntity.cs" />
   </ItemGroup>
   <ItemGroup>

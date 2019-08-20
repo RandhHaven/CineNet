@@ -24,11 +24,8 @@ namespace AgenciaMedica.Models.Core
 
         public Usuario ValidarYObtenerUsuario()
         {
-            //FactoryUsuario nuevoUsuario = new FactoryUsuario();
-            Usuario nuevo = new Usuario(user, password);// nuevoUsuario.GetUsuario(user, password);
+            Usuario nuevo = new Usuario(user, password);
             List<Dictionary<string, object>> dicUsuario = UsuarioHandler.ObtenerDictionaryUsuario(new List<Dictionary<string, object>>());
-            //nuevo = (Usuario)dicUsuario.FirstOrDefault().;
-            //Usuario nuevo = CineHandler.
 
             return nuevo;
         }
