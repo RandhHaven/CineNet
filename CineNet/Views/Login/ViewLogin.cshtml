@@ -4,7 +4,7 @@
 }
 
 <div>
-    @using (Html.BeginForm("Ingresar", "Login", FormMethod.Post))
+    @using (Html.BeginForm("Login", "Login", FormMethod.Post))
     {
         <div class="row">
             <div class="col-lg-3"></div>
@@ -29,7 +29,7 @@
 
                     <div class="form-group">
                         <div class="col-lg-12">
-                            <a> @Html.ActionLink("Olvidó su Contraseña.", "Registro", "Action", new { @class = "col-lg-12" }) </a>
+                            <a> @Html.ActionLink("Olvidó su Contraseña.", "Register", "Action", new { @class = "col-lg-12" }) </a>
                         </div>
                     </div>
 

@@ -18,9 +18,9 @@
         }
 
         [HttpPost]
-        public ActionResult Ingresar(string user, string password)
+        public ActionResult ViewLogin(string user, string password)
         {
-            ViewResult viewController;
+            
             try
             {
                 //Crear todo el esquema de ingreso.
@@ -31,7 +31,7 @@
                 }
                 else
                 {
-                    this
+                    //si no existe mostrar mensaje de error.
                 }
                
             }
@@ -39,9 +39,9 @@
             {
                 throw ex;
             }
-            viewController = View();
+            
 
-            return viewController;
+            return ViewLogin();
         }
 
         [HttpPost]
