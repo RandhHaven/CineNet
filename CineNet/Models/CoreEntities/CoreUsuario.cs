@@ -2,7 +2,6 @@
 using CineNet.Models;
 using CineNetEntity;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace AgenciaMedica.Models.Core
 {

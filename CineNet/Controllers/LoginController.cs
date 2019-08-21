@@ -10,7 +10,8 @@
 
     #region Class
     public class LoginController : CineController
-    {        
+    {
+        public Usuario unUsuario = new Usuario();
         // GET: Login
         public ActionResult ViewLogin()
         {
@@ -19,8 +20,7 @@
 
         [HttpPost]
         public ActionResult ViewLogin(string user, string password)
-        {
-            
+        {            
             try
             {
                 //Crear todo el esquema de ingreso.
@@ -33,21 +33,18 @@
                 {
                     //si no existe mostrar mensaje de error.
                 }
-               
             }
             catch (Exception ex)
             {
                 throw ex;
-            }
-            
+            }           
 
             return ViewLogin();
         }
 
         [HttpPost]
-        public ActionResult Registrar(string userName, string email, string password)
+        public ActionResult Registrar(string userName)
         {
-            //Usuario usuario = CoreUsuario.RegistrarNuevoUsuario(userName, email, password);
             return View();
         }
     }

@@ -7,7 +7,8 @@ namespace CineNet.Models
     public class Usuario
     {
         int idUsuario;
-        string user;
+        string userId;
+        string userName;
         string password;
         string email;
         int estado;
@@ -16,7 +17,8 @@ namespace CineNet.Models
         public int IdUsuario { get => idUsuario; set => idUsuario = value; }
 
         [Required(ErrorMessage = "Please enter student name.")]
-        public string User { get => user; set => user = value; }
+        public string UserId { get => userId; set => userId = value; }
+        public string UserName{ get => userName; set => userName = value; }
         public string Password { get => password; set => password = value; }
         public string Email { get => email; set => email = value; }
         public int Estado { get => estado; set => estado = value; }
@@ -24,7 +26,7 @@ namespace CineNet.Models
 
         public Usuario(string usuario = null, string password = null)
         {
-            this.User = usuario;
+            this.UserName = usuario;
             this.Password = password;
         }
     }
