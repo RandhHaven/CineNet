@@ -1,21 +1,28 @@
 ﻿using CineHandler.Usuario;
-using CineNet.Models;
 using CineNetEntity;
 using System.Collections.Generic;
+using System.Web.Mvc;
 
-namespace AgenciaMedica.Models.Core
+namespace CineNet.Models.Core
 {
     public class CoreUsuario : UsuarioEntity
     {
         #region Atributos
         private string user;
         private string password;
+
+        public Usuario UnUsuario { get; set; }
+
+        public IEnumerable<SelectListItem> ActionsList { get; set; }
+
+        public string StudentGrade { get; set; }
         #endregion
 
         #region Constructor
         public CoreUsuario(string user, string password)
         {
             this.user = user;
+            ActionsList = new List<SelectListItem>();
             this.password = password;
         }   
         #endregion
@@ -39,5 +46,11 @@ namespace AgenciaMedica.Models.Core
                 Name = x.IName  
             });  
         }*/
+
+        private void LoadGenders()
+        {
+            UnUsuario.ListGenders = new System.Web.UI.WebControls.ListItem();
+
+        }
     }
 }

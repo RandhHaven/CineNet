@@ -1,9 +1,118 @@
-﻿@{
-    ViewBag.Title = "Register User";
+﻿@model CineNet.Models.Usuario
+@{
+    Layout = null;
 }
 
-<div>   
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Imagenes/jpg")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="body-content">
     <div>
-        <input class="btn-primary d-block col-lg-3 form-control" ; type="submit" name="btnSubmit" value="Ingresar" />
-    </div>                
-</div>
+        @using (Html.BeginForm("ViewRegister", "Register", FormMethod.Post))
+        {
+            <div class="row pt-5">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4> Create Account </h4>
+                        </div>
+
+                        <form id="login-form" class="card-body container">
+                            <div class="row pt-2 form-group">
+                                <div class="col-md-2">
+                                    @Html.Label("UserName: ", new { @class = "control-label" })
+                                </div>
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.UserName, "Enter your Name.", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-2">
+                                    @Html.Label("SurName: ", new { @class = "control-label" })
+                                </div>
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.UserName, "Enter your UserName.", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row pt-2">
+                                <div class="col-md-2">
+                                    @Html.Label("Email: ", new { @class = "control-label" })
+                                </div>
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Email, "Enter your Email.", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row pt-2 form-group">
+                                <div class="col-md-2">
+                                    @Html.Label("Password: ", new { @class = "control-label" })
+                                </div>
+                                <div class="col-md-4">
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Password, "Enter your user.", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-2">
+                                    @Html.Label("Confirm Password: ", new { @class = "control-label" })
+                                </div>
+                                <div class="col-md-4">
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.UserName, "Enter your user.", new { @class = "text-danger" })
+                                </div>
+
+                            </div>
+                            <div class="row pt-2 form-group">
+                                <div class="col-md-2">
+                                    @Html.Label("Cell Phone: ", new { @class = "control-label" })
+                                </div>
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.CellPhone, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.CellPhone, "Enter your user.", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-2">
+                                    @Html.Label("Credit Card : ", new { @class = "control-label" })
+                                </div>
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.CreditCard, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.CreditCard, "Enter your user.", new { @class = "text-danger" })
+                                </div>
+
+                            </div>
+                            <div class="row pt-2 form-group">
+                                <div class="col-md-2">
+                                    @Html.Label("Birthday: ", new { @class = "control-label" })
+                                </div>
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.Birthday, new { @class = "date form-control" })
+                                    @Html.ValidationMessageFor(m => m.Birthday, "Enter your Birthday.", new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-2">
+                                    @Html.Label("Gender: ", new { @class = "control-label" })
+                                </div>
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.Gender, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Gender, "Enter your Gender.", new { @class = "text-danger" })
+                                </div>
+
+                            </div>
+                            <div class="row d-print-table-row">
+                                <div class="col-md-4"> </div>
+                                <div class="col-md-4">
+                                    <input class="btn-primary d-block form-control"; type="submit" name="btnSubmit" value="Registrar" />
+                                </div>
+                                <div class="col-md-4"> </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        }
+     </div>
+</body>
+</html>

@@ -1,6 +1,6 @@
-﻿@model CineNet.Models.Usuario
+﻿@model CineNet.Models.Usuario 
 @{
-    ViewBag.Title = "Ingreso";
+    ViewBag.Title = "LOGIN";
 }
 
 <div>
@@ -29,15 +29,8 @@
 
                     <div class="form-group">
                         <div class="col-lg-12">
-                            <a> @Html.ActionLink("forget",
-                                                 "Registrar",   // <-- ActionMethod
-                                                 "Register",  // <-- Controller Name.
-                                                 "Usuario", // <-- Route arguments.
-                                                 null  // <-- htmlArguments .. which are none. You need this value
-                                                       //     otherwise you call the WRONG method ...
-                                                       //     (refer to comments, below).
-                                                ) </a>
-                            <a> @Html.ActionLink("Create Account", "Registrar", "Register", new { @class = "col-lg-12" }) </a>
+                            <a> @Html.ActionLink("Forget your password", "ViewRegister", "Register", new { @class = "col-lg-12" }) </a>
+                            <a> @Html.ActionLink("Create Account", "ViewRegister", "Register", new { @class = "col-lg-12" }) </a>
                         </div>
                     </div>
 

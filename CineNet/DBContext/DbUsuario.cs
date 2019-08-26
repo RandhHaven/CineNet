@@ -1,9 +1,5 @@
-﻿using AgenciaMedica.Models.Core;
+﻿using CineNet.Models.Core;
 using CineNet.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace CineNet.DBContext
 {

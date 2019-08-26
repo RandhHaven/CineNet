@@ -1,7 +1,7 @@
 ﻿namespace CineNet.Controllers
 {
     #region Directives
-    using AgenciaMedica.Models.Core;
+    using CineNet.Models.Core;
     using CineNet.Base;
     using CineNet.Models;
     using System;
@@ -20,7 +20,7 @@
 
         [HttpPost]
         public ActionResult ViewLogin(string user, string password)
-        {            
+        {
             try
             {
                 //Crear todo el esquema de ingreso.
@@ -37,15 +37,8 @@
             catch (Exception ex)
             {
                 throw ex;
-            }           
-
-            return ViewLogin();
-        }
-
-        [HttpPost]
-        public ActionResult Registrar(string userName)
-        {
-            return View();
+            }
+            return View(unUsuario);
         }
     }
     #endregion
