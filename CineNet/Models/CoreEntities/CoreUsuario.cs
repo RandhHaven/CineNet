@@ -1,21 +1,25 @@
-﻿using CineHandler.Usuario;
-using CineNetEntity;
-using System.Collections.Generic;
-using System.Web.Mvc;
-
-namespace CineNet.Models.Core
+﻿namespace CineNet.Models.Core
 {
+    #region Directives
+    using CineHandler.Usuario;
+    using CineNet.Models.Entities;
+    using CineNetEntity;
+    using System.Collections.Generic;
+    using System.Web.Mvc;
+    #endregion
+
     public class CoreUsuario : UsuarioEntity
     {
         #region Atributos
         private string user;
         private string password;
-
         public Usuario UnUsuario { get; set; }
 
         public IEnumerable<SelectListItem> ActionsList { get; set; }
 
         public string StudentGrade { get; set; }
+
+        public List<Gender> ListGenders { get; set; }
         #endregion
 
         #region Constructor
@@ -47,10 +51,11 @@ namespace CineNet.Models.Core
             });  
         }*/
 
-        private void LoadGenders()
+        public void LoadGenders()
         {
-            UnUsuario.ListGenders = new System.Web.UI.WebControls.ListItem();
-
+            this.ListGenders = new List<Gender>();
+            this.ListGenders.Add(new Gender() { Id = "M", Value = "Male" });
+            this.ListGenders.Add(new Gender() { Id = "F", Value = "Female" });
         }
     }
 }

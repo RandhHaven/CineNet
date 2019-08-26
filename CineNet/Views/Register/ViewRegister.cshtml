@@ -1,6 +1,6 @@
 ﻿@model CineNet.Models.Usuario
 @{
-    Layout = null;
+    ViewBag.Title = "Register";
 }
 
 <!DOCTYPE html>
@@ -95,7 +95,7 @@
                                     @Html.Label("Gender: ", new { @class = "control-label" })
                                 </div>
                                 <div class="col-md-4">
-                                    @Html.TextBoxFor(m => m.Gender, new { @class = "form-control" })
+                                    @Html.DropDownListFor(m => m.Gender, (IEnumerable<SelectListItem>)ViewBag.Region)
                                     @Html.ValidationMessageFor(m => m.Gender, "Enter your Gender.", new { @class = "text-danger" })
                                 </div>
 
@@ -103,7 +103,7 @@
                             <div class="row d-print-table-row">
                                 <div class="col-md-4"> </div>
                                 <div class="col-md-4">
-                                    <input class="btn-primary d-block form-control"; type="submit" name="btnSubmit" value="Registrar" />
+                                    <input class="btn-primary d-block form-control" ; type="submit" name="btnSubmit" value="Registrar" />
                                 </div>
                                 <div class="col-md-4"> </div>
                             </div>
@@ -113,6 +113,6 @@
                 <div class="col-md-2"></div>
             </div>
         }
-     </div>
+    </div>
 </body>
 </html>

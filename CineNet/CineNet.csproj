@@ -196,10 +196,12 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="DBContext\DbUsuario.cs" />
+    <Compile Include="Enumerados\EnumGender.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CoreEntities\CoreUsuario.cs" />
+    <Compile Include="Models\Entities\Gender.cs" />
     <Compile Include="Models\Entities\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValuesController.cs" />

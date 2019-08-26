@@ -16,7 +16,7 @@
         private string userName;
         private string surName;
         private string password;
-        private ListItem listGenders;
+        
         private string gender;
         private string cellPhone;
         private string creditCard;
@@ -35,7 +35,7 @@
         public string Email { get => email; set => email = value; }
         public string Gender { get => gender; set => gender = value; }
         public string CellPhone { get => cellPhone; set => cellPhone = value; }
-        public ListItem ListGenders { get => listGenders; set => listGenders = value; }
+       
         public DateTime Birthday { get => birthday; set => birthday = value; }
         public string CreditCard { get => creditCard; set => creditCard = value; }
         public int Estado { get => estado; set => estado = value; }

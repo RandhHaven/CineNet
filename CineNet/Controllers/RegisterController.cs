@@ -7,6 +7,7 @@
     using System.Web.Mvc;
     using CineNet.Models.Core;
     using System.Web.UI;
+    using System.Linq;
     #endregion
 
     #region Class
@@ -32,11 +33,17 @@
         }
 
         [HttpPost]
-        public ActionResult ViewRegister(string userName, string surName, string password, string mail )
+        public ActionResult ViewRegister(string userName, string surName, string password, string mail)
         {
-            Usuario unUsuario = new CoreUsuario(userName, password).ValidarYObtenerUsuario();
             try
             {
+                CoreUsuario core = new CoreUsuario(userName, password);
+                core.LoadGenders();
+                ViewBag.Region = core.ListGenders.Select(mod => new SelectListItem
+                {
+                    Text = mod.Id,
+                    Value = mod.Value
+                });
             }
             catch (Exception ex)
             {
