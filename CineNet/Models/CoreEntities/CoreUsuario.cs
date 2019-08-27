@@ -19,10 +19,14 @@
 
         public string StudentGrade { get; set; }
 
-        public List<Gender> ListGenders { get; set; }
+        public List<GenderC> ListGenders { get; set; }
         #endregion
 
         #region Constructor
+        public CoreUsuario()
+        {
+        }
+
         public CoreUsuario(string user, string password)
         {
             this.user = user;
@@ -40,22 +44,22 @@
             return nuevo;
         }
 
-        /*public Usuario RegistrarNuevoUsuario(string user, string mail, string password)
+        public Usuario RegistrarNuevoUsuario(string user, string mail, string password)
         {
             Usuario nuevoUsuario = new Usuario(user, password);
             return nuevoUsuario;
-            List<Student> lstStudent = lstInterStudent.ConvertAll(x => new Student  
+            /*List<Student> lstStudent = lstInterStudent.ConvertAll(x => new Student  
             {  
                 Age = x.IAge,  
                 Name = x.IName  
-            });  
-        }*/
+            });*/
+        }
 
         public void LoadGenders()
         {
-            this.ListGenders = new List<Gender>();
-            this.ListGenders.Add(new Gender() { Id = "M", Value = "Male" });
-            this.ListGenders.Add(new Gender() { Id = "F", Value = "Female" });
+            this.ListGenders = new List<GenderC>();
+            this.ListGenders.Add(new GenderC() { Gender = "M", Value = "Male" });
+            this.ListGenders.Add(new GenderC() { Gender = "F", Value = "Female" });
         }
     }
 }

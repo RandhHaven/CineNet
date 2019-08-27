@@ -13,6 +13,7 @@
     #region Class
     public class RegisterController : CineController
     {
+        #region Atributes
         // GET: Register
         public bool SeleccionoPersona
         {
@@ -26,9 +27,16 @@
                 Session["SeleccionoPersona"] = value;
             }
         }
+        #endregion
 
         public ActionResult ViewRegister()
         {
+            CoreCineNet.LoadGenders();
+            ViewBag.Region = CoreCineNet.ListGenders.Select(mod => new SelectListItem
+            {
+                Text = mod.Gender,
+                Value = mod.Value
+            });
             return View();
         }
 
@@ -37,13 +45,7 @@
         {
             try
             {
-                CoreUsuario core = new CoreUsuario(userName, password);
-                core.LoadGenders();
-                ViewBag.Region = core.ListGenders.Select(mod => new SelectListItem
-                {
-                    Text = mod.Id,
-                    Value = mod.Value
-                });
+                RegistrarUsuario();
             }
             catch (Exception ex)
             {

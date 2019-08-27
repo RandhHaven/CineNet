@@ -22,7 +22,6 @@
                         <div class="card-header">
                             <h4> Create Account </h4>
                         </div>
-
                         <form id="login-form" class="card-body container">
                             <div class="row pt-2 form-group">
                                 <div class="col-md-2">
@@ -45,7 +44,7 @@
                                     @Html.Label("Email: ", new { @class = "control-label" })
                                 </div>
                                 <div class="col-md-10">
-                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control width=100%" })
                                     @Html.ValidationMessageFor(m => m.Email, "Enter your Email.", new { @class = "text-danger" })
                                 </div>
                             </div>
@@ -72,14 +71,14 @@
                                 </div>
                                 <div class="col-md-4">
                                     @Html.TextBoxFor(m => m.CellPhone, new { @class = "form-control" })
-                                    @Html.ValidationMessageFor(m => m.CellPhone, "Enter your user.", new { @class = "text-danger" })
+                                    @Html.ValidationMessageFor(m => m.CellPhone, "Enter your Credit Card.", new { @class = "text-danger" })
                                 </div>
                                 <div class="col-md-2">
                                     @Html.Label("Credit Card : ", new { @class = "control-label" })
                                 </div>
                                 <div class="col-md-4">
                                     @Html.TextBoxFor(m => m.CreditCard, new { @class = "form-control" })
-                                    @Html.ValidationMessageFor(m => m.CreditCard, "Enter your user.", new { @class = "text-danger" })
+                                    @Html.ValidationMessageFor(m => m.CreditCard, "Enter your Credit Card.", new { @class = "text-danger" })
                                 </div>
 
                             </div>
