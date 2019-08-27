@@ -5,22 +5,41 @@
       <xsd:import schemaLocation="http://localhost:52073/ServiceUser.svc?xsd=xsd0" namespace="http://tempuri.org/" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IServiceUser_DoWork_InputMessage">
-    <wsdl:part name="parameters" element="tns:DoWork" />
+  <wsdl:message name="IServiceUser_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
   </wsdl:message>
-  <wsdl:message name="IServiceUser_DoWork_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  <wsdl:message name="IServiceUser_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceUser_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceUser_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
   </wsdl:message>
   <wsdl:portType name="IServiceUser">
-    <wsdl:operation name="DoWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServiceUser/DoWork" message="tns:IServiceUser_DoWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServiceUser/DoWorkResponse" message="tns:IServiceUser_DoWork_OutputMessage" />
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceUser/AddUser" message="tns:IServiceUser_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceUser/AddUserResponse" message="tns:IServiceUser_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceUser/DeleteUser" message="tns:IServiceUser_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceUser/DeleteUserResponse" message="tns:IServiceUser_DeleteUser_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServiceUser" type="tns:IServiceUser">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="DoWork">
-      <soap:operation soapAction="http://tempuri.org/IServiceUser/DoWork" style="document" />
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceUser/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceUser/DeleteUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

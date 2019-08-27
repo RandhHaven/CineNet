@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace BussinesCineNet.ServiceUser {
+namespace ServicesAccessCineNet.WSServiceUser {
     using System;
     using System.Web.Services;
     using System.Diagnostics;
@@ -29,13 +29,15 @@ namespace BussinesCineNet.ServiceUser {
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_IServiceUser", Namespace="http://tempuri.org/")]
     public partial class ServiceUser : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
-        private System.Threading.SendOrPostCallback DoWorkOperationCompleted;
+        private System.Threading.SendOrPostCallback AddUserOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DeleteUserOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
         public ServiceUser() {
-            this.Url = global::BussinesCineNet.Properties.Settings.Default.BussinesCineNet_ServiceUser_ServiceUser;
+            this.Url = global::ServicesAccessCineNet.Properties.Settings.Default.ServicesAccessCineNet_WSServiceUser_ServiceUser;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;
@@ -70,31 +72,60 @@ namespace BussinesCineNet.ServiceUser {
         }
         
         /// <remarks/>
-        public event DoWorkCompletedEventHandler DoWorkCompleted;
+        public event AddUserCompletedEventHandler AddUserCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IServiceUser/DoWork", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void DoWork() {
-            this.Invoke("DoWork", new object[0]);
+        public event DeleteUserCompletedEventHandler DeleteUserCompleted;
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IServiceUser/AddUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void AddUser() {
+            this.Invoke("AddUser", new object[0]);
         }
         
         /// <remarks/>
-        public void DoWorkAsync() {
-            this.DoWorkAsync(null);
+        public void AddUserAsync() {
+            this.AddUserAsync(null);
         }
         
         /// <remarks/>
-        public void DoWorkAsync(object userState) {
-            if ((this.DoWorkOperationCompleted == null)) {
-                this.DoWorkOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoWorkOperationCompleted);
+        public void AddUserAsync(object userState) {
+            if ((this.AddUserOperationCompleted == null)) {
+                this.AddUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddUserOperationCompleted);
             }
-            this.InvokeAsync("DoWork", new object[0], this.DoWorkOperationCompleted, userState);
+            this.InvokeAsync("AddUser", new object[0], this.AddUserOperationCompleted, userState);
         }
         
-        private void OnDoWorkOperationCompleted(object arg) {
-            if ((this.DoWorkCompleted != null)) {
+        private void OnAddUserOperationCompleted(object arg) {
+            if ((this.AddUserCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.DoWorkCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.AddUserCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IServiceUser/DeleteUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void DeleteUser() {
+            this.Invoke("DeleteUser", new object[0]);
+        }
+        
+        /// <remarks/>
+        public void DeleteUserAsync() {
+            this.DeleteUserAsync(null);
+        }
+        
+        /// <remarks/>
+        public void DeleteUserAsync(object userState) {
+            if ((this.DeleteUserOperationCompleted == null)) {
+                this.DeleteUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeleteUserOperationCompleted);
+            }
+            this.InvokeAsync("DeleteUser", new object[0], this.DeleteUserOperationCompleted, userState);
+        }
+        
+        private void OnDeleteUserOperationCompleted(object arg) {
+            if ((this.DeleteUserCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DeleteUserCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -119,7 +150,11 @@ namespace BussinesCineNet.ServiceUser {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
-    public delegate void DoWorkCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    public delegate void AddUserCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    public delegate void DeleteUserCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591

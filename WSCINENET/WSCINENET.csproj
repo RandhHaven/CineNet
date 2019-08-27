@@ -85,6 +85,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BussinesCineNet\CineNetBussines.csproj">
+      <Project>{45b1fab8-004a-43fb-9ce2-4ec6fde4fe9a}</Project>
+      <Name>CineNetBussines</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CineEntity\CineNetEntity.csproj">
+      <Project>{F0C50C84-A655-4C3E-99D3-D87EDBE00C18}</Project>
+      <Name>CineNetEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -30,7 +30,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesAccessCineNet", "Se
 		{749EACA6-4F5E-4013-87B4-68211CF55FA6} = {749EACA6-4F5E-4013-87B4-68211CF55FA6}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussinesCineNet", "BussinesCineNet\BussinesCineNet.csproj", "{45B1FAB8-004A-43FB-9CE2-4EC6FDE4FE9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineNetBussines", "BussinesCineNet\CineNetBussines.csproj", "{45B1FAB8-004A-43FB-9CE2-4EC6FDE4FE9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

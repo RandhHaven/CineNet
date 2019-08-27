@@ -12,7 +12,7 @@ namespace WSCINENET
     public interface IServiceUser
     {
         [OperationContract]
-        void AddUser();
+        string AddUser(string usuario);
 
         [OperationContract]
         void DeleteUser();

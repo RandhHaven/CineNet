@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BussinesCineNet.Properties {
+namespace ServicesAccessCineNet.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -20,6 +20,16 @@ namespace BussinesCineNet.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:52073/ServiceUser.svc")]
+        public string ServicesAccessCineNet_WSServiceUser_ServiceUser {
+            get {
+                return ((string)(this["ServicesAccessCineNet_WSServiceUser_ServiceUser"]));
             }
         }
     }

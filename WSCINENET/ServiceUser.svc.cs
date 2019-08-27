@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
+﻿using BussinesCineNet.Interfaces;
+using CineNetEntity;
+using CineNetEntity.Helpers;
 
 namespace WSCINENET
 {
@@ -11,8 +8,16 @@ namespace WSCINENET
     // NOTE: In order to launch WCF Test Client for testing this service, please select ServiceUser.svc or ServiceUser.svc.cs at the Solution Explorer and start debugging.
     public class ServiceUser : IServiceUser
     {
-        public void AddUser()
+        public IRegisterBussines _IRegisterBussines
         {
+            get;
+            set;
+        }
+        
+        public string AddUser(string usuario)
+        {
+            _IRegisterBussines.Initialize((UsuarioEntity)UsuarioEntity.Deserialize(usuario));
+            return (SerializationHelper.SerializeToBinaryString(_IRegisterBussines.NewRegisterUser()));
         }
 
         public void DeleteUser()
