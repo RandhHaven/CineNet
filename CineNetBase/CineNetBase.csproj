@@ -98,7 +98,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AServicesAccess.cs" />
     <Compile Include="Base.cs" />
+    <Compile Include="Interfaces\IServiceAccess.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,9 +1,11 @@
-﻿using System;
-using System.Xml.Serialization;
-using System.Runtime.Serialization;
-
-namespace CineNetEntity
+﻿namespace CineNetEntity
 {
+    #region Directives
+    using System;
+    using System.Xml.Serialization;
+    using System.Runtime.Serialization;
+    #endregion
+
     [Serializable]
     [DataContract]
     [XmlRoot("Entities", Namespace = "http://directv.com.ar/Entities")]

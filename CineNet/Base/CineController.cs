@@ -3,6 +3,7 @@
     #region Directives
     using CineNet.Models;
     using CineNet.Models.Core;
+    using ServicesAccessCineNet.Interfaces;
     using System;
     using System.Web.Mvc;
     #endregion
@@ -11,6 +12,8 @@
     public class CineController : Controller
     {
         #region Atributtes
+        public IRegisterUserSA _IRegisterUserSA  { get; set; }
+
         public CoreUsuario CoreCineNet
         {
             get
@@ -28,14 +31,15 @@
         {
             get
             {
-                object o = Session["CoreCineNet"];
-                return (Object.Equals(o, null)) ? new Usuario() : (Usuario)Session["CoreCineNet"];
+                object o = Session["Usuario"];
+                return (Object.Equals(o, null)) ? new Usuario() : (Usuario)Session["Usuario"];
             }
             set
             {
-                Session["CoreCineNet"] = value;
+                Session["Usuario"] = value;
             }
         }
+        #endregion
 
         protected override void Initialize(System.Web.Routing.RequestContext requestContext)
         {
@@ -44,9 +48,16 @@
 
         public void RegistrarUsuario()
         {
-            
+            try
+            {
+                _IRegisterUserSA.AddUser();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }           
         }
-        #endregion
+       
     }
     #endregion
 }

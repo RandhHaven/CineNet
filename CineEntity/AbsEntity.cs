@@ -1,10 +1,12 @@
-﻿using System;
-using Microsoft.Practices.EnterpriseLibrary.Validation;
-using System.Text;
-using CineNetEntity.Helpers;
-
-namespace CineNetEntity
+﻿namespace CineNetEntity
 {
+    #region Directives
+    using System;
+    using Microsoft.Practices.EnterpriseLibrary.Validation;
+    using System.Text;
+    using CineNetEntity.Helpers;
+    #endregion
+
     [Serializable]
     public abstract class AbsEntity
     {

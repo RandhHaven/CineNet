@@ -250,6 +250,10 @@
       <Project>{cbd2eeea-f611-4064-a2a2-b7bbc41cfaf4}</Project>
       <Name>CineHandler</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ServicesAccessCineNet\ServicesAccessCineNet.csproj">
+      <Project>{28156260-6811-4d25-b30b-b56072332ff7}</Project>
+      <Name>ServicesAccessCineNet</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

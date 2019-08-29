@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IRegisterUserSA.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -121,6 +122,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\WSServiceUser\ServiceUser.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CineEntity\CineNetEntity.csproj">
+      <Project>{F0C50C84-A655-4C3E-99D3-D87EDBE00C18}</Project>
+      <Name>CineNetEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CineNetBase\CineNetBase.csproj">
+      <Project>{9CE84C6C-1237-4316-AAFC-96EE80EC8EED}</Project>
+      <Name>CineNetBase</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
