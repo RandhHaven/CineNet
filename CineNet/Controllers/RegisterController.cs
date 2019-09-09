@@ -29,8 +29,10 @@
         }
         #endregion
 
+        #region Methods
         public ActionResult ViewRegister()
         {
+            this.OnInitialize();
             CoreCineNet.LoadGenders();
             ViewBag.Region = CoreCineNet.ListGenders.Select(mod => new SelectListItem
             {
@@ -53,6 +55,12 @@
             }
             return ViewRegister();
         }
+
+        public override void OnInitialize()
+        {
+            CoreCineNet = new CoreUsuario();
+        }
+        #endregion
     }
     #endregion
 }

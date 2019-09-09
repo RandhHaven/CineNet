@@ -40,6 +40,11 @@
             }
             return View(unUsuario);
         }
+
+        public override void OnInitialize()
+        {
+
+        }
     }
     #endregion
 }

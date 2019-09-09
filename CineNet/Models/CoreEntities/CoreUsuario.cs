@@ -29,9 +29,9 @@
 
         public CoreUsuario(string user, string password)
         {
-            this.user = user;
-            ActionsList = new List<SelectListItem>();
+            this.user = user;            
             this.password = password;
+            ActionsList = new List<SelectListItem>();
         }   
         #endregion
 

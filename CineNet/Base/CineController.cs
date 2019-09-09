@@ -9,7 +9,7 @@
     #endregion
 
     #region Class
-    public class CineController : Controller
+    public abstract class CineController : Controller
     {
         #region Atributtes
         public IRegisterUserSA _IRegisterUserSA  { get; set; }
@@ -45,6 +45,8 @@
         {
             base.Initialize(requestContext);
         }
+
+        public abstract void OnInitialize();
 
         public void RegistrarUsuario()
         {
