@@ -18,8 +18,7 @@
         {
         }
 
-        public RegisterUserSA(UsuarioEntity usuario)
-           : base(usuario)
+        public RegisterUserSA(UsuarioEntity usuario) : base(usuario)
         { }
         #endregion
 

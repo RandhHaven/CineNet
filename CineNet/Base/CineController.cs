@@ -52,7 +52,7 @@
         {
             try
             {
-                _IRegisterUserSA.AddUser();
+               _IRegisterUserSA.AddUser();
             }
             catch (Exception ex)
             {
