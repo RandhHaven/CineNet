@@ -15,7 +15,7 @@
     <RootNamespace>CineNet</RootNamespace>
     <AssemblyName>CineNet</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -287,7 +287,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>63832</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/CineNet</IISUrl>
+          <IISUrl>http://localhost:63832/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
